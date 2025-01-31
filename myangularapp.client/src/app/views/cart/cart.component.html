@@ -6,7 +6,11 @@
         {{ item.bookId }} - {{ item.quantity }}
         <!-- <button (click)="removeFromCart(item.book.id)">Remove</button> -->
         <button (click)="removeFromCart(item.bookId)">Remove</button>
+        <button (click)="reduceQuantity(item.bookId)">Reduce Quantity</button>
       </li>
     </ul>
     <button (click)="checkout()">Checkout</button>
+    <div *ngIf="message" [ngClass]="{'success': messageType === 'success', 'error': messageType === 'error'}">
+      {{ message }}
+    </div>
   </div>

@@ -6,4 +6,7 @@
         <button (click)="addToCart(book)">Add to Cart</button>
       </li>
     </ul>
+    <div *ngIf="message" [ngClass]="{'success': messageType === 'success', 'error': messageType === 'error'}">
+      {{ message }}
+    </div>
   </div>
