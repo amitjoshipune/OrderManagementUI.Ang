@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-sm bg-light">
     <a class="navbar-brand" routerLink="/home">Bookstore</a>
     <div class="collapse navbar-collapse">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" routerLink="/register">Register</a>
         </li>
@@ -12,10 +12,14 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/home">Home</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
       </ul>
     </div>
   </nav>
   <router-outlet></router-outlet>
+</div>
 <!-- <h1 id="tableLabel">Weather forecast</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
